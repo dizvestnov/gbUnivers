@@ -1,0 +1,20 @@
+/*.carouselComment*/
+.carouselComment
+	height 100%
+	position relative
+	&__item
+		height inherit
+	&__indicators
+		position relative
+		width 212px
+		bottom 4px
+		padding 0
+		+responsive(md)
+			margin 0 auto
+		& > li
+			width 38px
+			height 4px
+			margin-right 13px
+			margin-left 0
+		& > li.active
+			background-color accentColor

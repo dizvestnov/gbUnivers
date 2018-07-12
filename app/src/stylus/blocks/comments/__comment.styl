@@ -1,0 +1,73 @@
+/*.comment*/
+.comment
+	display flex
+	justify-content space-between
+	flex-wrap nowrap
+	+responsive(xs)
+		display flex
+		flex-direction column
+		padding 0
+	&__item
+		height inherit
+		&:nth-child(1)
+			margin-right 20px
+			+responsive(xs)
+				display flex
+				align-items center
+			+responsive(sm)
+				flex-direction column
+				margin 0 auto
+				padding-bottom 15px
+		&:nth-child(2)
+			width 100%
+	&__img
+		width 82px
+		height 81px
+		+responsive(sm)
+			margin-bottom 10px
+	&__text
+		font-style italic
+		font-size 16px
+		text-align left
+		line-height 26px
+		color rgba(34, 34, 36, 0.67)
+		padding 0
+		margin 0
+		+responsive(sm)
+			text-align center
+	&__autor
+		position relative
+	&-autor
+		min-width 29vw
+		position absolute
+		letter-spacing .59px
+		margin-left 100px
+		margin-top 10px
+		+responsive(sm)
+			margin 0
+		+responsive(xs)
+			position relative
+		//	margin-left 1rem
+		//	margin-top 2rem
+		+responsive(xss)
+			text-align center
+		//	margin 8px
+		&__name
+			width 100%
+			text-align left
+			line-height 16px
+			font-size 16px
+			font-weight 700
+			color accentColor
+			margin 0
+			+responsive(sm)
+				text-align center
+		&__location
+			text-align left
+			line-height 14px
+			font-size 12px
+			font-weight 300
+			color baseColor
+			margin 0
+			+responsive(sm)
+				text-align center

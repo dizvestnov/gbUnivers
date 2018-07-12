@@ -22,7 +22,7 @@ const src = {
 	pug: path.resolve(__dirname, 'app', 'src', 'pug', 'pages', '*.pug'),
 	pugWatch: path.resolve(__dirname, 'app', 'src', 'pug', '**/*.pug'),
 	styl: path.resolve(__dirname, 'app', 'src', 'stylus', 'styles.styl'),
-	stylWatch: path.resolve(__dirname, 'app', 'src', 'stylus', '**/*.styl'),
+	stylWatch: path.resolve(__dirname, 'app', 'src', 'stylus', '**/**/*.styl'),
 	babel: path.resolve(__dirname, 'app', 'src', 'babel', 'src', '**/*.js'),
 	js: path.resolve(__dirname, 'app', 'src', 'babel', 'dist', 'main.js'),
 	assets: {

@@ -1,0 +1,52 @@
+/*.commentsSubscribe*/
+.commentsSubscribe
+	width inherit
+	height inherit
+	display flex
+	align-items center
+	justify-content space-around
+	+responsive(md)
+		flex-direction column-reverse
+		justify-content center
+	&__carouselComment
+		height 100%
+		padding 0
+		margin 0
+	&__comment
+		width 50%
+		height 100%
+		padding 10% 5% 14.5% 0
+		margin 0
+		+responsive(md)
+			width 56%
+			height 70%
+			padding 3% 5% 3% 0
+		//	height 17vw
+		//	margin-top 4vw
+		+responsive(sm)
+			width 90%
+			padding 0
+		//	height 22vw
+		//+responsive(xs)
+		//	height 32vw
+		//	margin-top 0
+		//+responsive(xss)
+		//	width 99%
+		//	height 60vw
+	&__subscribe
+		width 50%
+		height 100%
+		padding 13% 3% 1% 0
+		margin 0
+		+responsive(md)
+			width 100%
+			height 50%
+			padding 5% 0 0 0
+		+responsive(xs)
+			width 90vw
+		+responsive(xss)
+			height 45vw
+
+@import "__carouselComment"
+@import "__comment"
+@import "__subscribe"
