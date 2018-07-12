@@ -1,0 +1,31 @@
+.footer
+	transition()
+	grid-column-start 2
+	height footerHeight
+	color footerColor
+	display flex
+	align-items center
+	justify-content space-between
+	&-p
+		margin 0
+		font-size footerFontSize
+		font-weight footerFontWeight
+	&-items
+		display flex
+	&-link
+		display flex
+		justify-content center
+		align-items center
+		width 28px
+		height 28px
+		color #b2b2b2
+		background-color #ffffff
+		line-height 32px
+		padding 9px
+		padding-top 7px
+		margin-left 5px
+		&:hover
+			color #fff
+			background-color #f16d7f
+		&:visited
+			opacity .3

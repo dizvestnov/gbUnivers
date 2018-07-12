@@ -1,0 +1,6 @@
+.idea
+/node-modules
+/examples
+/app/dist
+/app/src/assets
+/app/babel/dist

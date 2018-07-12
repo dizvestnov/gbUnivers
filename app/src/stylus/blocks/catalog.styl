@@ -1,0 +1,111 @@
+.good:hover .catalogHover
+	opacity 1
+	z-index 7
+
+.good:hover .catalog-img
+	-webkit-filter brightness(50%)
+
+.catalog
+	//grid-column-start 2
+	display grid
+	justify-content center
+	&-title
+		text-align center
+		letter-spacing 0.75px
+		color black
+		font-size 30px
+		font-weight 600
+		margin 20px 0 0 0
+	&-description
+		text-align center
+		line-height 30px
+		color lightgrey
+		font-size 14px
+		font-weight 400
+		letter-spacing 0.35px
+	&-items
+		margin-top 56px
+		display flex
+		flex-wrap wrap
+		justify-content space-around
+		padding-left 0
+		padding-right 0
+		margin-bottom 12px
+	&-item
+		width 260px
+		height 363px
+		display block
+		position relative
+		margin-bottom 39px
+		&:hover
+			width 260px
+			height 363px
+			box-shadow 0 5px 8px rgba(0, 0, 0, 0.16)
+	&-name
+		margin-left 15px
+		margin-top 12px
+		color black
+		font-size 13px
+		font-weight 400
+		letter-spacing 0.3px
+		text-transform uppercase
+	&-price
+		margin-left 14px
+		margin-top 13px
+		color lightcoral
+		font-size 16px
+		font-weight 700
+		text-transform uppercase
+	&-img
+		width 260px
+		height 280px
+		background-color black
+
+
+.catalogHover
+	opacity 0
+	display flex
+	align-items center
+	justify-content center
+	position absolute
+	top 0
+	left 0
+	width 262px
+	height 280px
+	&-cart
+		border 1px solid white
+		padding .4rem .8rem
+		display flex
+	&-img
+		width 27px
+		height 25px
+		margin-right 10px
+	&-text
+		color white
+		font-size 14px
+		font-weight 400
+		display flex
+		align-items center
+
+
+.catalog
+	&-button
+		width 215px
+		height 51px
+		background-color accentColor
+		border-width 0
+		color whiteColor
+		font-size 16px
+		font-weight 400
+		line-height 54px
+		letter-spacing 0.4px
+		display block
+		text-align center
+		margin 0 auto
+		&:hover
+			cursor pointer
+		&:active
+			opacity 0.5
+	&-buttonImg
+		margin-bottom 2px
+		margin-left 5px

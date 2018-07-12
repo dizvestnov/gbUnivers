@@ -1,0 +1,92 @@
+supermenu()
+	position relative
+	display grid
+	grid-template-rows auto auto auto
+	grid-template-columns 1fr 1fr 1fr
+	grid-column-start 2
+	background-color white
+	border 1px solid lightgray
+	border-radius 5px
+	box-shadow 0 5px 9px -9px black
+	margin-top 8px
+	margin-left -190px
+	transition()
+
+supermenuPointer()
+	&::after
+		content " "
+		position absolute
+		top -6px
+		left 30%
+		font-size 0
+		line-height 0
+		width 9px
+		height 9px
+		display block
+		background-color white
+		border-top 1px solid lightgray
+		border-left 1px solid lightgray
+		transform rotate(45deg)
+
+supermenuList()
+	&-list
+		display grid
+		text-align left
+		padding 2vh 2vw
+		margin 0
+		transition()
+		&:nth-child(1)
+			grid-row-start 1
+			grid-row-end 4
+		&:nth-child(2)
+			grid-row-start 1
+			grid-row-end 2
+		&:nth-child(3)
+			grid-row-start 2
+			grid-row-end 4
+		&:nth-child(4)
+			grid-row-start 1
+			grid-row-end 2
+		&:nth-child(5)
+			grid-row-start 2
+			grid-row-end 4
+
+supermenuTitle()
+	&-title
+		line-height 1rem
+		text-transform uppercase
+		color #898989
+		border-bottom 2px solid lightgrey
+		padding 0
+		padding-bottom 3px
+		margin 0
+		transition()
+
+supermenuItem()
+	&-item
+		display grid
+		transition()
+
+supermenuLink()
+	&-link
+		text-transform none
+		color #898989
+		padding 5px 0
+		transition()
+		&:hover
+			color lightcoral
+
+supermenuImg()
+	&-img
+		display block
+		width 270px
+		transition()
+
+.supermenu
+	supermenu()
+	supermenuPointer()
+	supermenuList()
+	supermenuTitle()
+	supermenuItem()
+	supermenuLink()
+	supermenuImg()

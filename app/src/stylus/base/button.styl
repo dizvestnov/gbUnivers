@@ -1,0 +1,111 @@
+// button
+
+.button
+	display block
+	transition all .2s ease-in
+	&:hover
+		transform scale(1.02)
+	&:active
+		transform scale(1.01)
+	&-link
+		display block
+		position relative
+		text-align center
+		text-decoration none
+		transition all .2s ease-in
+		&:hover
+			transform scale(1.02)
+		&:active
+			opacity .8
+			transform scale(1.01)
+		&::after
+			font-size 14px
+
+
+//тестовые стили для замены
+.mySite
+	box-sizing border-box
+	font-size 14px
+	font-weight 300
+	letter-spacing .35px
+.mySite a
+	text-decoration none
+.myHeader
+	width 800px
+	height 130px
+	display flex
+	align-items center
+	border 1px solid baseColor
+	margin 0 auto
+	&__item
+		width 100%
+		height 100%
+		display flex
+		align-items center
+		justify-content center
+		margin 0 auto
+	&__btn
+		width 8rem
+		height 39px
+
+//btn
+.btn
+	width inherit
+	height inherit
+	transition all .2s ease-in
+	&:hover
+		transform scale(1.02)
+	&:active
+		transform scale(1.01)
+	&-dropdown
+		display block
+		position relative
+		text-align center
+		text-decoration none
+		&:after
+			display inline-block
+			width 0
+			height 0
+			vertical-align .255em
+			content ""
+			border-top .3em solid
+			border-right .3em solid transparent
+			border-bottom 0
+			border-left .3em solid transparent
+	&__item
+		width inherit
+		height inherit
+	&__link
+		width inherit
+		height inherit
+		display flex
+		align-items center
+		justify-content center
+		color inherit
+		font-size inherit
+		font-weight inherit
+		letter-spacing inherit
+	&--baseColor
+		color baseColor
+		background-color baseBgColor
+		border 1px solid baseBdrColor
+		border-radius 0
+		font-size 16px
+		letter-spacing 1px
+		// &:hover
+		//   color baseColor-hover
+		&:active
+			color baseColor-active
+			background-color baseBgColor-active
+	&--assentColor
+		color assentColor
+		background-color assentBgColor
+		border 1px solid assentBdrColor
+		border-radius 0
+		font-size 16px
+		letter-spacing 1px
+		// &:hover
+		//   color assentBgColor-active
+		&:active
+			color assentColor-active
+			background-color assentBgColor-active

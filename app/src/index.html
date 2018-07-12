@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript ES6</title>
+    <!-- css-->
+    <!-- js-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+  </head>
+  <body class="body">
+    <div class="site">
+      <header class="site-header">
+        <div class="container header">
+          <div class="header-logo logo"><a class="logo-link" href="/"><img class="logo-img" alt="Logo" src="assets/img/icons/logo/logo.png"></a></div>
+          <div class="header-items">
+            <div class="header-item">
+              <div class="header-search search">
+                <div class="search-item"><a class="navbarDropdown btn-dropdown search-dropdownButton" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">Women</a>
+                    <div class="dropdown-divider" role="separator"></div><a class="dropdown-item" href="#">Dresses</a><a class="dropdown-item" href="#">Tops</a><a class="dropdown-item" href="#">Sweaters/Knits</a><a class="dropdown-item" href="#">Jackets/Coats</a><a class="dropdown-item" href="#">Blazers</a><a class="dropdown-item" href="#">Denim</a><a class="dropdown-item" href="#">Leggings/Pants</a><a class="dropdown-item" href="#">Skirts/Shorts</a><a class="dropdown-item" href="#">Accessories</a>
+                    <div class="dropdownMarginTop"></div><a class="dropdown-item" href="#">Man</a>
+                    <div class="dropdown-divider" role="separator"></div><a class="dropdown-item" href="#">Tees/Tank tops</a><a class="dropdown-item" href="#">Shirts/Polos</a><a class="dropdown-item" href="#">Sweaters</a><a class="dropdown-item" href="#">Sweatshirts/Hoodies</a><a class="dropdown-item" href="#">Blazers</a><a class="dropdown-item" href="#">Jackets/vests</a>
+                  </div>
+                </div>
+                <div class="search-item">
+                  <form class="search-form form">
+                    <input class="search-input form-input" id="navbarDropdown" type="search" placeholder="Search for item..." aria-label="Search">
+                    <button class="btn btn-outline-success search-button form-submit" type="submit"><i class="fas fa-search search-fa"></i></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="header-item">
+              <div class="header-basket">
+                <div class="basket" id="liveCart">
+                  <div class="basket-item">
+                    <div class="basket-count"><span class="count"></span></div><img class="basket-img" src="assets/img/icons/basket/basket@2x.png" alt="Basket">
+                  </div>
+                  <div class="basket-dropdown">
+                    <div class="basket-liveCart" id="cart"></div>
+                    <div class="basket-buttons"><a class="basket-link" href="#">checkout</a><a class="basket-link" href="#">go to cart</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="header-myAcc">
+                <div class="myAcc btn-dropdown" id="myAcc">My account
+                  <div class="myAcc-dropdown">
+                    <div class="myAcc-item"><a class="myAcc-link" href="#">Sign in</a><a class="myAcc-link" href="#">Sign out</a><a class="myAcc-link" href="#">Sign up</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="site-topNav" id="siteTopNav"></section>
+      <div class="site-content content">
+        <main class="content-main main">
+          <section class="site-catalog">
+            <div class="container">
+              <div class="catalog">
+                <h2 class="catalog-title">Fetured Items</h2>
+                <div class="catalog-description">Shop for items based on what we featured in this week</div>
+                <div class="catalog-items" id="goods"></div><a class="button catalog-button" href="#">Browse All Product<img class="catalog-buttonImg" src="assets/img/icons/button/--.png" alt=""></a>
+              </div>
+            </div>
+            <!--catalog-bestItems-->
+          </section>
+        </main>
+        <!--include ../includes/comments-->
+      </div>
+    </div>
+    <!--script(src=jQueryCdnLink)-->
+    <script src="jquery.min.js"></script>
+    <!--script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+.form
+	display flex
+	align-items center
+	flex-wrap nowrap
+	&-input
+		box-shadow none
+		+placeholder()
+			color inputPhColor
+		&:active
+			border-color lightColor!important
+			box-shadow none!important
+			outline none!important
+		&:focus
+			color baseColor
+			border-color lightColor!important
+			box-shadow none!important
+	&-submit
+		&:hover
+			border-color lightColor
+		&:active
+			border-color lightColor!important
+			box-shadow none!important
+			outline none!important
+		&:focus
+			box-shadow none!important

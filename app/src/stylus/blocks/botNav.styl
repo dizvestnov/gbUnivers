@@ -1,0 +1,58 @@
+.botNav
+	display flex
+	align-items center
+	justify-content space-between
+	+responsive(md)
+		flex-wrap wrap
+		text-align center
+	&-logo
+		margin-bottom 20px
+		+responsive(md)
+			width 100%
+			margin-left -15px
+			margin-bottom 40px
+	&-text
+		width 428px
+		color botNavTextColor
+		+responsive(md)
+			width 100%
+			margin-bottom 40px
+.botNavMenu
+	display flex
+	justify-content space-between
+	align-items center
+	flex-wrap wrap
+	width 608px
+	+responsive(md)
+		width 100%
+	+responsive(sm)
+		width 100%
+		flex-direction column
+	&-list
+		margin 20px
+	&-title
+		display flex
+		justify-content space-between
+		align-items center
+		color #f16d7f
+		font-size 18px
+		font-weight 700
+		line-height 26px
+		text-align left
+		text-transform uppercase
+		margin-bottom 20px
+		+responsive(md)
+			justify-content center
+			text-align center
+			margin-bottom 10px
+	&-link
+		font-size 16px
+		font-weight 400
+		line-height 24px
+		margin-bottom 5px
+		color botNavTextColor
+		+responsive(md)
+			font-size 18px
+			padding 15px
+		&:hover
+			color accentColor

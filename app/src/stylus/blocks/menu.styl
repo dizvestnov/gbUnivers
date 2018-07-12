@@ -1,0 +1,50 @@
+.menu
+	display flex
+	justify-content center
+	align-items center
+	grid-column-start 2
+	font-size 1rem
+	font-weight 400
+	text-transform uppercase
+	transition()
+	margin 0
+	padding 0
+	&-list
+		display flex
+		align-items center
+		justify-content center
+		box-shadow 0 3px 9px -10px black
+		margin 0
+		padding 0
+		transition()
+	&-item
+		display flex
+		align-items center
+		justify-content center
+	&-link
+		position relative
+		white-space nowrap
+		transition()
+		padding .5rem 1rem
+		&:before
+			content ""
+			width 0
+			position absolute
+			right 0
+			bottom 0
+			left 0
+			margin auto
+			border-bottom 2px solid btnBaseColor-hover
+			transition all 0.3s ease
+		&:hover
+			&:before
+				width 80%
+		&:hover
+			color btnBaseColor-hover
+		&:hover
+			.container--absolute
+				opacity 1
+				z-index 3
+				display flex
+
+@import"supermenu"
