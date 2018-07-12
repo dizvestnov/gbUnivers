@@ -218,7 +218,7 @@ function createMenu() {
 		new SuperMenuList('supermenu-list', superMenuItems, 'Brands', 'supermenu-title', 1),
 		new SuperMenuList('supermenu-list', superMenuItems, 'Discounts', 'supermenu-title', 2),
 		new SuperMenuList('supermenu-list', superMenuItems, 'Special offer', 'supermenu-title', 3),
-		new SuperMenuListImg('supermenu-list', 'img', 'assets/img/supermenu-banner.jpg')
+		new SuperMenuListImg('supermenu-list', 'img', 'assets/json-server/img/supermenu-banner.jpg')
 	];
 	const superMenuMan = new SuperMenu('supermenu', superMenuListMan);
 	const superMenuContainerMan = new Container('container--absolute').render();
@@ -229,7 +229,7 @@ function createMenu() {
 		new SuperMenuList('supermenu-list', superMenuItems, 'Brands', 'supermenu-title', 1),
 		new SuperMenuList('supermenu-list', superMenuItems, 'Discounts', 'supermenu-title', 2),
 		new SuperMenuList('supermenu-list', superMenuItems, 'Special offer', 'supermenu-title', 3),
-		new SuperMenuListImg('supermenu-list', 'img', 'assets/img/supermenu-banner.jpg')
+		new SuperMenuListImg('supermenu-list', 'img', 'assets/json-server/img/supermenu-banner.jpg')
 	];
 	const superMenuWomen = new SuperMenu('supermenu', superMenuListWomen);
 	const superMenuContainerWomen = new Container('container--absolute').render();
@@ -246,8 +246,8 @@ function createMenu() {
 	];
 	const menuList = new MenuList('menu-list', items);
 	const menu = new Menu('menu menu--grid', menuList);
-	const containerMenu = new Menu('container', menu);
-	const header = $('#siteTopNav')[0];
+	const containerMenu = new Menu('container site-topNav', menu);
+	const header = $('.site-header')[0];
 	header.appendChild(containerMenu.render());
 }
 createMenu();
