@@ -1,4 +1,100 @@
+class EventListener {
+	constructor() {
+		this.listenEvents = "click";
+		this.eventBlock = ".site";
+		this.eventElement = ".siteEvent";
+		this.eventHiddenElement = ".siteEvent-element";
+		this.status = {
+			displayed: false,
+			prevDisplayedElement: "",
+			displayedElement: ""
+		};
+	}
 
+	listener() {
+		$(this.eventBlock)
+			.on(this.listenEvents, event => this.eventElementChecker(event.target));
+	}
+
+	eventElementChecker(e) {
+		if (this.eventElement === `#${e.id}`
+			||
+			this.eventElement === `.${e.className}`
+			||
+			this.eventElement === `${e.tagName}`
+		) return this.showHide($(this.eventHiddenElement));
+		else
+			return this.hideElement($(this.eventHiddenElement));
+	}
+
+	showHide(arg) {
+		if (this.status.displayed  === false) {
+			return this.showElement(arg);
+		}
+		else return this.hideElement(arg);
+	}
+
+	showElement(element) {
+		this.status.displayed = true;
+		this.status.displayedElement = element;
+		return $(element).show();
+
+	}
+
+	hideElement(element) {
+		this.status.displayed = false;
+		this.status.prevDisplayedElement = this.status.displayedElement;
+		this.status.displayedElement = "";
+		return $(element).hide();
+	}
+}
+
+class DropdownBtnListener extends EventListener {
+	constructor(eventElement, eventHiddenElement) {
+		super();
+		this.eventElement = eventElement;
+		this.eventHiddenElement = eventHiddenElement;
+		this.status = {
+			displayed: false,
+			prevDisplayedElement: "",
+			displayedElement: ""
+		};
+	}
+
+	eventElementChecker(e) {
+		if (this.eventElement === `#${e.id}`
+			|| this.eventElement === `.${e.className}`
+			|| this.eventElement === `${e.tagName}`
+		) {
+			if ($(e)[0].firstElementChild === null) {
+				return this.showHide($(e)[0].nextElementSibling);
+			}
+			return this.showHide($(e)[0].firstElementChild);
+		}
+		else
+		if (this.eventHiddenElement === `#${e.id}`
+			|| this.eventHiddenElement === `.${e.className}`
+			|| this.eventHiddenElement === `.${e.offsetParent.offsetParent.className}`
+			|| this.eventHiddenElement === `.${e.offsetParent.className}`) {
+			console.log(e);
+			return;
+			// this.showElement($(this.eventHiddenElement));
+		}
+		else
+			return this.hideElement($(this.eventHiddenElement));
+	}
+}
+
+/**
+ * EventListener
+ * @type {DropdownBtnListener}
+ */
+
+	// EventListeners
+const eventMyAcc = new DropdownBtnListener("#myAcc", ".myAcc-dropdown");
+eventMyAcc.listener();
+const eventLiveCart = new DropdownBtnListener("#liveCartEvent", ".basket-dropdown");
+eventLiveCart.listener();
 
 
 
