@@ -1,20 +1,22 @@
-// Найти видео или сайт где видел класс с обработчиком событий
-
-
-// class Header extends Site {
-// 	constructor(className) {
-// 		super(className);
-// 		this.tagName = 'header';
-// 		// this.child = child;
-// 	}
-// 	render() {
-// 		console.log('Метод render класса Header');
-// 		super.render();
-// 	}
-// }
-
-// function createHeader() {
-// 	const header = new Header('header');
-// 	document.body.appendChild(header.render());
-// }
-// createHeader();
+class Header extends Site {
+	constructor(tagName, className, parent, link, alt) {
+		super(tagName, className, parent, link, alt);
+	}
+	render() {
+		const element = document.createElement(this.tagName);
+		element.id = `${this.id}`;
+		element.className = this.className;
+		if(this.parent !== undefined) {
+			this.parent.append(element);
+		}
+		if(this.tagName === 'a') {
+			element.href = this.link;
+			element.textContent = this.alt;
+		}
+		if(this.tagName === 'img') {
+			element.src = this.link;
+			element.alt = this.alt;
+		}
+		return element;
+	}
+}

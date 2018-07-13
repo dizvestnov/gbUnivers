@@ -1,4 +1,3 @@
-"use strict";
 function buildGoodsList() {
 	$.get(`${bdIpAddress}/goods`, {}, function(goods) {
 		const $goods = $('#goods');

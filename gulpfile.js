@@ -51,11 +51,11 @@ gulp.task('serve', function(){
 		notify: false,
 		open: false
 	});
+	gulp.watch(src.babel, gulp.series('babel'));
 	gulp.watch(src.pug, gulp.series('html'));
 	gulp.watch(src.pugWatch, gulp.series('html'));
 	gulp.watch(src.styl, gulp.series('css'));
 	gulp.watch(src.stylWatch, gulp.series('css'));
-	gulp.watch(src.babel, gulp.series('babel'));
 	gulp.watch(src.js, gulp.series('js'));
 	gulp.watch(src.html).on('change', reload);
 });
@@ -136,7 +136,7 @@ gulp.task('dist', () => {
 });
 
 /* Сборка */
-gulp.task('build', gulp.parallel('html', 'babel', 'css', 'js'));
+gulp.task('build', gulp.series('html', 'babel', 'css', 'js'));
 
 /* Разработка */
 gulp.task('default', gulp.series('build', 'serve'));
