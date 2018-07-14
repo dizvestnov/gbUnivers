@@ -24,3 +24,25 @@ class Site extends Container {
 		return element;
 	}
 }
+
+class SiteElement extends Container {
+	constructor(className, parent, attribute) {
+		super(className);
+		this.parent = parent;
+		this.attribute = attribute;
+		this.init();
+	}
+	init(){
+		if(this.attribute !== undefined) {
+			const item = this.render();
+			let [name, value] = this.attribute;
+			item.setAttribute(name, value);
+			this.parent.appendChild(item);
+			return item;
+		} else {
+			const item = this.render();
+			this.parent.appendChild(item);
+			return item;
+		}
+	}
+}

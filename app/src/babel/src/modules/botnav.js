@@ -104,7 +104,7 @@ class BotNavLink extends BotNav {
 const botNavTextFirst = 'Objectively transition extensive data rather than cross functional solutions. Monotonically syndicate multidisciplinary materials before go forward benefits. Intrinsically syndicate an expanded array of processes and cross-unit partnerships.';
 const botNavTextSecond = 'Efficiently plagiarize 24/365 action items and focused intermediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.';
 
-function createBotNav() {
+(function createBotNav() {
 	const botNavLink = [
 		[
 			new BotNavLink('#', 'button botNavMenu-link', 'Home'),
@@ -140,7 +140,6 @@ function createBotNav() {
 		new BotNavItem('nav', 'botNavMenu-list', [botNavTitle[1], botNavItemLink[1]]),
 		new BotNavItem('nav', 'botNavMenu-list', [botNavTitle[2], botNavItemLink[2]])
 	];
-
 	const botNavTextTxt = [
 		new BotNavText('p', 'botNav-description', botNavTextFirst),
 		new BotNavText('p', 'botNav-description', botNavTextSecond)
@@ -157,5 +156,4 @@ function createBotNav() {
 	const containerBotNav = new BotNav('div', 'container', botNav);
 	const siteBotNav = new BotNav('section', 'site-botNav', containerBotNav);
 	site.appendChild(siteBotNav.render());
-}
-createBotNav();
+})();

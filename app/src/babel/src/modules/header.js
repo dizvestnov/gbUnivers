@@ -4,7 +4,7 @@ class Header extends Site {
 	}
 	render() {
 		const element = document.createElement(this.tagName);
-		element.id = this.id;
+		element.id = `header-${this.id}`;
 		element.className = this.className;
 		if(this.parent !== undefined) {
 			this.parent.appendChild(element);
@@ -38,7 +38,6 @@ class Form extends Header {
 			return button;
 		}
 	}
-
 	inputRender(){
 		const element = document.createElement(this.tagName);
 		element.className = this.className;
@@ -49,9 +48,4 @@ class Form extends Header {
 		element.setAttribute('aria-label', this.label);
 		return element;
 	}
-	// render(){
-	// 	super.render();
-	// 	element.type = this.type;
-	// 	return element;
-	// }
 }

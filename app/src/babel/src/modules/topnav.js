@@ -182,7 +182,7 @@ class SuperMenuItem extends Container {
 }
 
 
-function createMenu() {
+(function createMenu() {
 	const superMenuItems = [
 		[
 			new SuperMenuItem('#', 'Dresses'),
@@ -248,6 +248,5 @@ function createMenu() {
 	const menu = new Menu('menu menu--grid', menuList);
 	const containerMenu = new Menu('container site-topNav', menu);
 	const header = $('.site-header')[0];
-	header.appendChild(containerMenu.render());
-}
-createMenu();
+	mySite.appendChild(containerMenu.render());
+})();
